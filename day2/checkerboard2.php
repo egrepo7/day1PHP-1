@@ -16,7 +16,14 @@
         height: 50px;
       }
       .tile2{
-        background-color: lightblue;
+        <?php
+          function randColor(){
+            $colors = array('lightgrey', 'red', 'blue', 'black', 'pink', 'lime', 'magenta', 'lightyellow', 'orange', 'orchid');
+            $index = rand(0,9);
+            return $colors[$index];
+          }
+        ?>
+        background-color: <?= randColor(); ?>;
         width: 50px;
         height: 50px;
       }
