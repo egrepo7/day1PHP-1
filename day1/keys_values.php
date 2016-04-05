@@ -1,8 +1,13 @@
 <?php
   function printArray2($arr){
     echo "There are " .count($arr). " keys in this array: ";
+    end($arr);
+    $final_key = key($arr);
     foreach($arr as $key => $value){
-      echo "$key, ";
+      echo $key;
+      if($key != $final_key){
+        echo ", ";
+      }
     }
     echo "<br>";
     foreach($arr as $key => $value){

@@ -1,15 +1,16 @@
 <?php
  header('Content-type: text/css');
 
- $colors = array('lightgrey', 'red', 'blue', 'black', 'pink', 'lime', 'magenta');
  function randColor(){
-   $rand = rand(0,6);
-   return $colors[$rand];
+   $colors = array('lightgrey', 'red', 'blue', 'black', 'pink', 'lime', 'magenta', 'lightyellow', 'orange', 'orchid');
+   $index = rand(0,9);
+   return $colors[$index];
  }
-
- $color = randColor();
 ?>
 
 h1{
-  color: <?php echo $color; ?>;
+  color: <?php echo randColor(); ?>;
+}
+p{
+  color: <?php echo randColor(); ?>;
 }
