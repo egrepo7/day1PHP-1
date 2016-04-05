@@ -48,27 +48,8 @@
          );
 
         // this is a code using foreach loop
-        // foreach($users as $key => $value){
-        //   $user_num = $key + 1;
-        //   if($user_num % 5 == 0){
-        //     echo "<tr class='highlight'>";
-        //   }
-        //   else{
-        //     echo "<tr>";
-        //   }
-        //   echo "<td><b>$user_num</b></td>";
-        //   echo "<td>".$users[$key]['first_name']."</td>";
-        //   echo "<td>".$users[$key]['last_name']."</td>";
-        //   $full_name = $users[$key]['first_name']." ".$users[$key]['last_name'];
-        //   echo "<td>".$full_name."</td>";
-        //   echo "<td>".strtoupper($full_name)."</td>";
-        //   echo "<td>".strlen(str_replace(' ','',$full_name))."</td>";
-        //   echo "</tr>";
-        // }
-
-        // this is a code using for loop.
-        for($i=0; $i<count($users); $i++){
-          $user_num = $i + 1;
+        foreach($users as $key => $value){
+          $user_num = $key + 1;
           if($user_num % 5 == 0){
             echo "<tr class='highlight'>";
           }
@@ -76,14 +57,33 @@
             echo "<tr>";
           }
           echo "<td><b>$user_num</b></td>";
-          echo "<td>".$users[$i]['first_name']."</td>";
-          echo "<td>".$users[$i]['last_name']."</td>";
-          $full_name = $users[$i]['first_name']." ".$users[$i]['last_name'];
+          echo "<td>".$users[$key]['first_name']."</td>";
+          echo "<td>".$users[$key]['last_name']."</td>";
+          $full_name = $users[$key]['first_name']." ".$users[$key]['last_name'];
           echo "<td>".$full_name."</td>";
           echo "<td>".strtoupper($full_name)."</td>";
           echo "<td>".strlen(str_replace(' ','',$full_name))."</td>";
           echo "</tr>";
         }
+
+        // this is a code using for loop.
+        // for($i=0; $i<count($users); $i++){
+        //   $user_num = $i + 1;
+        //   if($user_num % 5 == 0){
+        //     echo "<tr class='highlight'>";
+        //   }
+        //   else{
+        //     echo "<tr>";
+        //   }
+        //   echo "<td><b>$user_num</b></td>";
+        //   echo "<td>".$users[$i]['first_name']."</td>";
+        //   echo "<td>".$users[$i]['last_name']."</td>";
+        //   $full_name = $users[$i]['first_name']." ".$users[$i]['last_name'];
+        //   echo "<td>".$full_name."</td>";
+        //   echo "<td>".strtoupper($full_name)."</td>";
+        //   echo "<td>".strlen(str_replace(' ','',$full_name))."</td>";
+        //   echo "</tr>";
+        // }
        ?>
      </table>
    </body>
