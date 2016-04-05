@@ -31,7 +31,6 @@
   </head>
   <body>
     <div id='container'>
-      <div id='board'></div>
       <div id='tile1'></div>
       <div id='tile2'></div>
     </div>
