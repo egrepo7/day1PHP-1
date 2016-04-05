@@ -18,7 +18,7 @@
       .tile2{
         <?php
           function randColor(){
-            $colors = array('lightgrey', 'red', 'blue', 'black', 'pink', 'lime', 'magenta', 'lightyellow', 'orange', 'orchid');
+            $colors = array('lightgrey', 'red', 'blue', 'lightblue', 'pink', 'lime', 'magenta', 'lightyellow', 'orange', 'orchid');
             $index = rand(0,9);
             return $colors[$index];
           }
